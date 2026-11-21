@@ -1,30 +1,31 @@
-2026-11-21 19:53:16 UTC
+2026-11-21 20:37:38 UTC
 macOS-27.2.1-arm64-arm-64bit
 Ren'Py 8.6.1.26111705
 
-Early init took 33 ms
-Loading error handling took 17 ms
-Loading script took 55 ms
-Loading save slot metadata took 10 ms
+Early init took 29 ms
+Loading error handling took 20 ms
+Loading script took 63 ms
+Loading save slot metadata took 12 ms
 Loading persistent took 0 ms
-Running init code took 26 ms
+Running init code took 21 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 0 ms
+Reloading save slot metadata took 1 ms
+Backing up script files to '/Users/parleluhaaar/Library/RenPy/backups/Destiny-of-Christmas':
 Dump and make backups took 23 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 17 ms
+Initial gc took 16 ms
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 5 ms
-Analyze screens took 0 ms
-Save screen analysis took 0 ms
+Load screen analysis took 0 ms
+Analyze screens took 4 ms
+Save screen analysis took 6 ms
 Save pyanalysis took 0 ms
-Save bytecode took 0 ms
+Save bytecode took 15 ms
 Running _start took 0 ms
-Interface start took 2730 ms
+Interface start took 1157 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -42,126 +43,7 @@ Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 25
 Emitting shaders as GLSL 330.
 Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/script.rpy", line 22, in script
-    deluluhive1 "Oh my gosh,fellow Beyhive, I think I have a theory about Yoncé."
-  File "renpy/ast.py", line 2995, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 992, in execute
-    statement_name(stmt_name)
-    ~~~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/ast.py", line 547, in statement_name
-    i(name)
-    ~^^^^^^
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-    ~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-    ~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "renpy/exports/statementexports.py", line 253, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1506, in do_with
-    return self.interact(
-           ~~~~~~~~~~~~~^
-        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2281, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2968, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1307, in draw_screen
-    surftree = renpy.display.render.render_screen(
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        root_widget,
-        ^^^^^^^^^^^^
-        renpy.config.screen_width,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-        renpy.config.screen_height,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transition.py", line 396, in render
-    bottom = render(self.old_widget, width, height, st, at)
-             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transform.py", line 1180, in render
-    return RenderTransform(self).render(width, height, st, at)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/image.py", line 532, in render
-    return wrap_render(self.target, width, height, st, at)
-           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/im.py", line 756, in render
-    return cache.get(d, render=True)
-           ~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/im.py", line 316, in get
-    surf = image.load()
-           ~~~~~~~~~~^^
-  File "renpy/display/im.py", line 967, in load
-    raise e
-  File "renpy/display/im.py", line 921, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/loader.py", line 759, in load
-    raise FileNotFoundError("Couldn't find file '%s'." % name)
-FileNotFoundError: Couldn't find file 'game/images/deluluhive.jpg'.
-
-While loading <renpy.display.im.Image object ('game/images/deluluhive.jpg') at 0x10252a8d0>:
-  File "game/script.rpy", line 22, in script
-    deluluhive1 "Oh my gosh,fellow Beyhive, I think I have a theory about Yoncé."
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-FileNotFoundError: Couldn't find file 'game/images/deluluhive.jpg'.
+Cleaning stores took 0 ms
+Load screen analysis took 8 ms
+Analyze screens took 0 ms
+Running _start took 1 ms

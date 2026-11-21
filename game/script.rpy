@@ -4,14 +4,15 @@ define k = Character("Kelly")
 define j = Character("JAY-Z")
 define bl = Character("Blue Ivy")
 define dc = Character("Destiny's Child")
-define deluluhive1 = Character("delulu hive 1")
-define deluluhive2 = Character("delulu hive 2")
-define deluluhive3 = Character("delulu hive 3")
+define Chika = Character("Chika")
+define Pearl = Character("Pearl")
 
-image b1 = "game/images/bey1.png"
-image b2 = "game/images/bey2.png"
-image beymad = "game/images/beymad.png"
-image deluluhive = "game/images/deluluhive.jpg"
+image b1 = "images/bey1.png"
+image b2 = "images/bey2.png"
+image beymad = "images/beymad.png"
+image deluluhive = Transform("images/deluluhive.jpg", xysize=(1920, 1080))
+image Chika = "images/Chika.png"
+image Pearl = "images/me.png"
 
 
 label start:
@@ -19,10 +20,18 @@ label start:
     
     scene deluluhive
 
-    deluluhive1 "Oh my gosh,fellow Beyhive, I think I have a theory about Yoncé."
+    show Chika
+    Chika "Oh my gosh, I think I have a theory about Bey."
+    show Pearl
+    Pearl "let's hear it."
+    show Chika
+    Chika "Okay so yk how she hasn't announced act III yet?"
+    show Pearl
+    Pearl "Yuh?"
+    Pearl "What about it?"
+    show Chika
+    Chika "Sooo.. basically maybe she's planning on releasing a co-album with Jay?"
+    show Pearl
+    Pearl "Uhh idk bout that cause Beyhive can't behave so maybe we're just getting the album in like 2030?"
 
-
-
-     
-
-    return
+return
