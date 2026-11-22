@@ -6,6 +6,8 @@ Try it: https://purlimurlikas-maker.itch.io/visuals
 
 To play the game, just click on the link, and press "run game".
 
+I recommend this game to teens and Beyoncé fans.
+
 This is a visual novel with different endings, and it has different characters like Beyoncé, Kelly, Michelle, Rihanna, and Chika. 
 
 The project was built with Ren'Py and published on itch.io.
