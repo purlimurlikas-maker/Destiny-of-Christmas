@@ -6,7 +6,9 @@ Try it: https://purlimurlikas-maker.itch.io/visuals
 
 To play the game, just click on the link, and press "run game".
 
-This is a visual novel with different endings, and it has different characters.
+This is a visual novel with different endings, and it has different characters like Beyoncé, Kelly, Michelle, Rihanna, and Chika. 
+
+The project was built with Ren'Py and published on itch.io.
 
 Credits:
 
@@ -16,3 +18,6 @@ Meghana helped me with my project idea, and when I got stuck. I also got help fr
 
 I used AI, when I had errors with Ren'Py and asked different questions like how to change my font.
 
+Most pictures are from Pinterest.
+
+I hope you enjoyyyy :)
