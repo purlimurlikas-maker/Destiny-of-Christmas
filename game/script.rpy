@@ -14,7 +14,7 @@ image beymad = Transform("images/beymad.png", xysize=(600, 700))
 image beysnow = Transform("images/beysnow.png", xysize=(600, 700))
 image m2 = Transform("images/m2.png", xysize=(600, 700))
 image k2 = Transform("images/k2.png", xysize=(600, 700))
-image deluluhive = Transform("images/deluluhive.jpg", xysize=(1920, 1080))
+image hive = Transform("images/deluluhive.jpg", xysize=(1920, 1080))
 image Chika = Transform("images/Chika.png", xysize=(600, 700))
 image Pearl = Transform("images/me.png", xysize=(600, 700))
 image skitrip = Transform("images/skitrip.jpg", xysize=(1920, 1080))
@@ -29,6 +29,8 @@ image computer = Transform("images/beyandhercomputer.png", xysize=(700, 700))
 image r = Transform("images/rihanna.png", xysize=(700, 700))
 image sb = Transform("images/Spongebob1.jpg", xysize=(1920, 1080))
 image ri = Transform("images/riri.png", xysize=(600, 700))
+image blue = Transform("images/blueback.jpg", xysize=(1920, 1080))
+image visuals = Transform("images/visuals.jpg", xysize=(1920, 1080))
 
 label start:
 
@@ -71,9 +73,12 @@ label inside:
     k "I haven't gotten to chill like this in a while"
     
     scene hotel
-    show beymad
+    show b1
     b "You guys I sorta just thought a bit about sth"
-    b "I probably should hit the studio, haven't been there in like 2 years lol. The beyhive is buzzin tho."
+
+    scene hotel
+    show beymad
+    b "I probably should hit the studio, haven't been there in like 2 years lol. The beyhive is buzzin tho and they want a new album."
     b "They be making crazy theories too, too bad they will never guess my plans."
 
     menu:
@@ -177,9 +182,9 @@ label studio:
     scene studio
     show riri
     
-    ri "uhh let me see"
-    ri "the first one could be FREEZE TIME"
-    ri "the second could be BREATHE AGAIN and so on"
+    r "uhh let me see"
+    r "the first one could be FREEZE TIME"
+    r "the second could be BREATHE AGAIN and so on"
 
     scene studio
     show b2
@@ -213,7 +218,81 @@ label name:
     scene studio
     show b2
 
-    b "hold on, let me check what my manager recommends"
+    b "Maybe we should like release it on a day that no one can expect and it would be a surprise drop?"
+
+    menu:
+        "Yes":
+            jump yes
+        
+        "No":
+            jump no
+
+
+label yes:
+    scene studio
+    show b2
+    b "okay, then it's settled"
+    b "should we just release it as soon as our videos are filmed and edited so it would be like a surprise drop?"
+
+    menu:
+        "Yes":
+            jump yes2
+
+
+label no:
+    scene studio
+    show b2
+    b "Alright, what date should we choose to announce and release it?"
+
+    r "Let's just choose it after the filming."
+
+    menu:
+        "Okay":
+            jump yes2
+
+label yes2:
+    scene blue
+    "Yayyyyy, you have a new album on the wayyyy :)"
+
+    menu:
+        "End":
+            return
+
+        "BONUSSSSSS":
+            jump bonus
+
+label bonus:
+    scene hive
+    "When are we getting the visuals?"
+
+    menu:
+        "You are the visuals":
+            jump visuals
+
+        "Never":
+            jump never
+
+label visuals:
+    scene visuals
+
+    "CORRECT"
+    b "You are the visuals baby"
+
+    return
+
+
+label never:
+
+    "INCORRECT"
+    "We are the visuals"
+
+    return
+
+
+
+
+
+
 
 
 
