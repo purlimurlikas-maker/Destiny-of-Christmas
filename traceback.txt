@@ -1,8 +1,8 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/michelle.jpg') at 0x101f9a8a0>:
-  File "game/script.rpy", line 68, in script
-    m "Gurl you tease 'em too much"
+While loading <renpy.display.im.Image object ('images/m.jpg') at 0x102828ec0>:
+  File "game/script.rpy", line 64, in script
+    m "Ikr? feels just like the old times."
   File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
@@ -11,8 +11,6 @@ While loading <renpy.display.im.Image object ('images/michelle.jpg') at 0x101f9a
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
   File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
@@ -21,38 +19,34 @@ While loading <renpy.display.im.Image object ('images/michelle.jpg') at 0x101f9a
   File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
   File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-FileNotFoundError: Couldn't find file 'images/michelle.jpg'.
+FileNotFoundError: Couldn't find file 'images/m.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 68, in script
-    m "Gurl you tease 'em too much"
+  File "game/script.rpy", line 64, in script
+    m "Ikr? feels just like the old times."
   File "renpy/ast.py", line 2995, in execute
     Say.execute(self)
     ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 992, in execute
-    statement_name(stmt_name)
-    ~~~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/ast.py", line 547, in statement_name
-    i(name)
-    ~^^^^^^
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-    ~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-    ~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "renpy/exports/statementexports.py", line 253, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1506, in do_with
-    return self.interact(
-           ~~~~~~~~~~~~~^
-        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
+  File "renpy/ast.py", line 1022, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/exports/sayexports.py", line 138, in say
+    who(what, *args, **kwargs)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1594, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 1241, in do_display
+    display_say(who, what, self.do_show, **display_args)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/character.py", line 914, in display_say
+    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/ui.py", line 312, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/display/core.py", line 2281, in interact
     repeat, rv = self.interact_core(
                  ~~~~~~~~~~~~~~~~~~^
@@ -82,11 +76,6 @@ Traceback (most recent call last):
   File "renpy/display/layout.py", line 896, in render
     surf = render(child, width, height, cst, cat)
            ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transition.py", line 396, in render
-    bottom = render(self.old_widget, width, height, st, at)
-             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/layout.py", line 896, in render
@@ -132,9 +121,9 @@ Traceback (most recent call last):
                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/loader.py", line 759, in load
     raise FileNotFoundError("Couldn't find file '%s'." % name)
-FileNotFoundError: Couldn't find file 'images/michelle.jpg'.
+FileNotFoundError: Couldn't find file 'images/m.jpg'.
 
 macOS-27.2.1-arm64-arm-64bit arm64
 Ren'Py 8.6.1.26111705
 Destiny of Christmas 1.0
-Sat Nov 21 18:20:26 2026
+Sat Nov 21 19:37:11 2026

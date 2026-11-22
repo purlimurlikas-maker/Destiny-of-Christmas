@@ -6,6 +6,7 @@ define bl = Character("Blue Ivy")
 define dc = Character("Destiny's Child")
 define Chika = Character("Deluluhive person 1")
 define Pearl = Character("Deluluhive person 2")
+define r = Character("Rihanna")
 
 image b1 = "images/bey1.png"
 image b2 = "images/bey2.png"
@@ -15,8 +16,10 @@ image Chika = Transform("images/Chika.png", xysize=(720, 600))
 image Pearl = Transform("images/me.png", xysize=(720, 600))
 image skitrip = Transform("images/skitrip.jpg", xysize=(1920, 1080))
 image hotel = Transform("images/hotel.jpg", xysize=(1920, 1080))
-image kelly = Transform("images/kelly.png", xysize=(720, 600))
-image m = Transform("images/michelle.jpg", xysize=(720, 600))
+image k = Transform("images/k.png", xysize=(720, 600))
+image m = Transform("images/m.png", xysize=(720, 600))
+image call1 = Transform("images/call1.png", xysize=(720, 600))
+image call2 = Transform("images/call2.png", xysize=(720, 600))
 
 
 
@@ -54,6 +57,7 @@ label start:
 
 label beyonce:
 
+     
     scene skitrip
     "Meanwhile Beyoncé"
     show b1
@@ -102,7 +106,7 @@ label actIII:
     "You wish!"
     jump doing
 
-label reunion
+label reunion:
     "Maybe?"
     jump doing
 
@@ -111,8 +115,22 @@ label paris:
     jump doing
 
 
+label doing:
+    b "They will never guess this. Okay they actually might."
+    b "I'm making a co-album with Rihanna."
+    
+    menu:
+        "Call Rihanna":
+            jump Rihanna
 
+        "Quit cause you don't want an album with Rihanna":
+            return
 
+label Rihanna:
+    scene hotel
+    show call1
+    b "Heyyy, Rihanna, how are you??"
+    return
 
     
 

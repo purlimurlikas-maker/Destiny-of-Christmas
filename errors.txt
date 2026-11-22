@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 50: expected menuitem
-    jump beyonce
-    ^
+File "game/script.rpy", line 122: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/script.rpy", line 123: expected statement.
+    "Call Rihanna":
+                  ^
+
+File "game/script.rpy", line 126: expected statement.
+    "Quit cause you don't want an album with Rihanna":
+                                                     ^
 
 Ren'Py Version: Ren'Py 8.6.1.26111705
-Sat Nov 21 16:58:37 2026
+Sat Nov 21 19:54:02 2026
