@@ -55,58 +55,65 @@ label start:
 label beyonce:
 
     scene skitrip
+    "Meanwhile Beyoncé"
     show b1
     b "This is so much fun! I looove hanging out with my girls."
+
+    scene skitrip 
+    show m
+    m "Ikr? feels just like the old times."
+
+    scene skitrip
+    show k
+    k "Yuhhh"
 
     scene skitrip
     show beymad
     b "I probably should hit the studio, haven't been there in like 2 years lol. The beyhive is buzzin tho."
     b "They be making crazy theories too, too bad they will never guess my plans."
 
-    scene skitrip
-    show m
-    m "Gurl you tease 'em too much"
+    menu:
+        "Beyoncé is making an album with Jay-Z":
+            jump album
 
-    scene skitrip
-    show beymad
-    b "Girl you know nobody can predict me, AND they still play too much."
-    b "They still won't forget about the bangs."
+        "Beyoncé is releasing more merch":
+            jump merch
 
-menu:
-    
-    "Destiny's child goes to their hotel.":
-        jump hotel
+        "Beyoncé is releasing act III (you wish)":
+            jump actIII
 
-label hotel: 
+        "Destiny's Child is reuniting":
+            jump reunion
+
+        "Jay-Z cheated and beyoncé is moving to Paris with her chidren (again)":
+            jump paris
+
+label album:
     scene hotel
-    show k
-
-k "WAIT! I have an idea.."
-k "How about we make a remake of the 8 days of Christmas album for its' 25th anniversary?"
-k "The comeback would be crazy"
-
-menu:
     
-    "Everybody agrees":
-        jump agree
+    "Wrong guess, she will NOT be making an album with Jay."
+    jump doing
 
-    "They don't think it's a great idea":
-        jump disagree
+label merch:
+    "Correct! She will be giving us more merch."
+    jump doing
 
+label actIII:
+    "You wish!"
+    jump doing
 
-label agree:
+label reunion
+    "Maybe?"
+    jump doing
 
-scene hotel
-show b2
-
-b "That might be a good idea, but we gotta lay LOW and I mean LOW cause the beyhive finds out anything."
-
-scene hotel
-show m 
-
-m ""
-
-
+label paris:
+    "Nah, he's scared of Solange."
+    jump doing
 
 
 
+
+
+    
+
+    

@@ -1,8 +1,8 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('game/images/deluluhive.jpg') at 0x10252a8d0>:
-  File "game/script.rpy", line 22, in script
-    deluluhive1 "Oh my gosh,fellow Beyhive, I think I have a theory about Yoncé."
+While loading <renpy.display.im.Image object ('images/michelle.jpg') at 0x101f9a8a0>:
+  File "game/script.rpy", line 68, in script
+    m "Gurl you tease 'em too much"
   File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
@@ -18,13 +18,16 @@ While loading <renpy.display.im.Image object ('game/images/deluluhive.jpg') at 0
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-FileNotFoundError: Couldn't find file 'game/images/deluluhive.jpg'.
+  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
+  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+FileNotFoundError: Couldn't find file 'images/michelle.jpg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 22, in script
-    deluluhive1 "Oh my gosh,fellow Beyhive, I think I have a theory about Yoncé."
+  File "game/script.rpy", line 68, in script
+    m "Gurl you tease 'em too much"
   File "renpy/ast.py", line 2995, in execute
     Say.execute(self)
     ~~~~~~~~~~~^^^^^^
@@ -110,6 +113,12 @@ Traceback (most recent call last):
            ~~~~~~^^^^^^^^^^^^^^^^^^^^^
   File "renpy/display/render.pyx", line 170, in renpy.display.render.render
   File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/transform.py", line 1180, in render
+    return RenderTransform(self).render(width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
+  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
   File "renpy/display/im.py", line 756, in render
     return cache.get(d, render=True)
            ~~~~~~~~~^^^^^^^^^^^^^^^^
@@ -123,9 +132,9 @@ Traceback (most recent call last):
                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/loader.py", line 759, in load
     raise FileNotFoundError("Couldn't find file '%s'." % name)
-FileNotFoundError: Couldn't find file 'game/images/deluluhive.jpg'.
+FileNotFoundError: Couldn't find file 'images/michelle.jpg'.
 
 macOS-27.2.1-arm64-arm-64bit arm64
 Ren'Py 8.6.1.26111705
 Destiny of Christmas 1.0
-Sat Nov 21 11:53:21 2026
+Sat Nov 21 18:20:26 2026
