@@ -1,46 +1,150 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-NameError: name 'ri' is not defined
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "game/script.rpy", line 180, in script
-    ri "uhh let me see"
-Exception: Sayer 'ri' is not defined.
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+FileNotFoundError: Couldn't find file 'fonts/Lora-Regular.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "renpy/ast.py", line 625, in eval_who
-    return renpy.python.py_eval(who)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^
-  File "renpy/python.py", line 1294, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/python.py", line 1287, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-           ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<none>", line 1, in <module>
-NameError: name 'ri' is not defined
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "game/script.rpy", line 180, in script
-    ri "uhh let me see"
-  File "renpy/ast.py", line 2995, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 980, in execute
-    who = eval_who(self.who, self.who_fast)
-          ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ast.py", line 627, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'ri' is not defined.
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
+    python hide:
+  File "renpy/ast.py", line 1229, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1262, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
+    python hide:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
+    ui.interact()
+    ~~~~~~~~~~~^^
+  File "renpy/ui.py", line 312, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 2281, in interact
+    repeat, rv = self.interact_core(
+                 ~~~~~~~~~~~~~~~~~~^
+        preloads=preloads,
+        ^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "renpy/display/core.py", line 2968, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/core.py", line 1307, in draw_screen
+    surftree = renpy.display.render.render_screen(
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        root_widget,
+        ^^^^^^^^^^^^
+        renpy.config.screen_width,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        renpy.config.screen_height,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/screen.py", line 787, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 896, in render
+    surf = render(child, width, height, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/layout.py", line 1159, in render
+    surf = render(d, width - x, rh, cst, cat)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 1087, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1394, in render
+    xminimum = max(xminimum, size_groups[size_group].width(width, height, st, at))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^ 
+  File "renpy/display/layout.py", line 1327, in width
+    rend = renpy.display.render.render_for_size(i, width, height, st, at)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 320, in renpy.display.render.render_for_size
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/display/behavior.py", line 1087, in render
+    rv = super(Button, self).render(width, height, st, at)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/layout.py", line 1444, in render
+    surf = render(child, width - cxmargin - cxpadding, height - cymargin - cypadding, st, at)
+           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
+  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
+  File "renpy/text/text.py", line 2817, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+                     ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/text/text.py", line 844, in __init__
+    seg_glyphs, rtl = self.glyphs_paragraph(p, order)
+                      ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "renpy/text/text.py", line 1722, in glyphs_paragraph
+    rv.append((ts, ts.glyphs(s[offset:], self, l)))
+                   ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^  
+  File "renpy/text/text.py", line 371, in glyphs
+    fo = font.get_font(
+         ~~~~~~~~~~~~~^
+        self.font,
+        ^^^^^^^^^^
+    ...<11 lines>...
+        self.features,
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "renpy/text/font.py", line 745, in get_font
+    face = load_face(fn, shaper)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "renpy/text/font.py", line 649, in load_face
+    font_file = renpy.loader.load(fn, directory="fonts")
+                ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/loader.py", line 759, in load
+    raise FileNotFoundError("Couldn't find file '%s'." % name)
+FileNotFoundError: Couldn't find file 'fonts/Lora-Regular.ttf'.
 
 macOS-27.2.1-arm64-arm-64bit arm64
 Ren'Py 8.6.1.26111705
-Destiny of Christmas 1.0
-Sun Nov 22 02:36:51 2026
+visuals 1.0
+Sun Nov 22 10:52:00 2026

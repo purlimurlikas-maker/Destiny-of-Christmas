@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 145: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
-
-File "game/script.rpy", line 151: expected 'image_name_component' not found.
-    show
-         ^
+File "game/gui.rpy", line 67: style property bold_font is not known.
+    bold_font "fonts/Lora-Bold.ttf"
+             ^
 
 Ren'Py Version: Ren'Py 8.6.1.26111705
-Sun Nov 22 00:58:20 2026
+Sun Nov 22 10:16:19 2026
