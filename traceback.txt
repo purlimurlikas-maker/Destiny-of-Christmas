@@ -1,129 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('images/m.jpg') at 0x102828ec0>:
-  File "game/script.rpy", line 64, in script
-    m "Ikr? feels just like the old times."
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-FileNotFoundError: Couldn't find file 'images/m.jpg'.
+While running game code:
+  File "game/script.rpy", line 81, in script
+    jump inside
+renpy.script.LabelNotFound: could not find label 'inside'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 64, in script
-    m "Ikr? feels just like the old times."
-  File "renpy/ast.py", line 2995, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 1022, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/exports/sayexports.py", line 138, in say
-    who(what, *args, **kwargs)
-    ~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1594, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 1241, in do_display
-    display_say(who, what, self.do_show, **display_args)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/character.py", line 914, in display_say
-    rv = renpy.ui.interact(mouse="say", type=type, roll_forward=roll_forward)
-         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/ui.py", line 312, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 2281, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2968, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1307, in draw_screen
-    surftree = renpy.display.render.render_screen(
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        root_widget,
-        ^^^^^^^^^^^^
-        renpy.config.screen_width,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-        renpy.config.screen_height,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transform.py", line 1180, in render
-    return RenderTransform(self).render(width, height, st, at)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/image.py", line 532, in render
-    return wrap_render(self.target, width, height, st, at)
-           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/image.py", line 307, in wrap_render
-    rend = render(child, w, h, st, at)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transform.py", line 1180, in render
-    return RenderTransform(self).render(width, height, st, at)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/accelerator.pyx", line 1024, in renpy.display.accelerator.RenderTransform.render
-  File "renpy/display/accelerator.pyx", line 441, in renpy.display.accelerator.RenderTransform.render_child
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/im.py", line 756, in render
-    return cache.get(d, render=True)
-           ~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/display/im.py", line 316, in get
-    surf = image.load()
-           ~~~~~~~~~~^^
-  File "renpy/display/im.py", line 967, in load
-    raise e
-  File "renpy/display/im.py", line 921, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/loader.py", line 759, in load
-    raise FileNotFoundError("Couldn't find file '%s'." % name)
-FileNotFoundError: Couldn't find file 'images/m.jpg'.
+  File "game/script.rpy", line 81, in script
+    jump inside
+  File "renpy/ast.py", line 1998, in execute
+    rv = renpy.game.script.lookup(target)
+         ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "renpy/script.py", line 1167, in lookup
+    raise LabelNotFound(original)
+renpy.script.LabelNotFound: could not find label 'inside'.
 
 macOS-27.2.1-arm64-arm-64bit arm64
 Ren'Py 8.6.1.26111705
 Destiny of Christmas 1.0
-Sat Nov 21 19:37:11 2026
+Sat Nov 21 22:37:04 2026

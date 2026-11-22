@@ -8,60 +8,31 @@ define Chika = Character("Deluluhive person 1")
 define Pearl = Character("Deluluhive person 2")
 define r = Character("Rihanna")
 
-image b1 = "images/bey1.png"
-image b2 = "images/bey2.png"
-image beymad = "images/beymad.png"
+image b1 = Transform("images/bey1.png", xysize=(600, 700))
+image b2 = Transform("images/bey2.png", xysize=(600, 700))
+image beymad = Transform("images/beymad.png", xysize=(600, 700))
+image beysnow = Transform("images/beysnow.png", xysize=(600, 700))
+image m2 = Transform("images/m2.png", xysize=(600, 700))
+image k2 = Transform("images/k2.png", xysize=(600, 700))
 image deluluhive = Transform("images/deluluhive.jpg", xysize=(1920, 1080))
-image Chika = Transform("images/Chika.png", xysize=(720, 600))
-image Pearl = Transform("images/me.png", xysize=(720, 600))
+image Chika = Transform("images/Chika.png", xysize=(600, 700))
+image Pearl = Transform("images/me.png", xysize=(600, 700))
 image skitrip = Transform("images/skitrip.jpg", xysize=(1920, 1080))
 image hotel = Transform("images/hotel.jpg", xysize=(1920, 1080))
-image k = Transform("images/k.png", xysize=(720, 600))
-image m = Transform("images/m.png", xysize=(720, 600))
-image call1 = Transform("images/call1.png", xysize=(720, 600))
-image call2 = Transform("images/call2.png", xysize=(720, 600))
-
-
+image k = Transform("images/k.png", xysize=(600, 700))
+image m = Transform("images/m.png", xysize=(600, 700))
+image call1 = Transform("images/call1.png", xysize=(600, 700))
+image call2 = Transform("images/call2.png", xysize=(600, 700))
+image room = Transform("images/room.jpg", xysize=(1920, 1080))
+image studio = Transform("images/studio.jpg", xysize=(1920, 1080))
 
 label start:
 
-    
-    scene deluluhive
-    show Chika
-    Chika "Oh my gosh, I think I have a theory about Bey."
 
-    scene deluluhive
-    show Pearl
-    Pearl "let's hear it."
-
-    scene deluluhive
-    show Chika
-    Chika "Okay so yk how she hasn't announced act III yet?"
-
-    scene deluluhive
-    show Pearl
-    Pearl "Yuh?"
-    Pearl "What about it?"
-
-    scene deluluhive
-    show Chika
-    Chika "Sooo.. basically maybe she's planning on releasing a co-album with Jay?"
-
-    scene deluluhive
-    show Pearl
-    Pearl "Uhh idk bout that cause Beyhive can't behave so maybe we're just getting the album in like 2030?"
-
-    menu:
-        "See what Beyoncé is doing":
-            jump beyonce
-
-label beyonce:
-
-     
     scene skitrip
-    "Meanwhile Beyoncé"
     show b1
     b "This is so much fun! I looove hanging out with my girls."
+    b "Ski trips are soooo fun"
 
     scene skitrip 
     show m
@@ -72,7 +43,32 @@ label beyonce:
     k "Yuhhh"
 
     scene skitrip
+    show m
+    m "Okay y'all it's FREEZING outside (ahem ahem, emphasis on freezing) we should probably go inside..."
+
+    menu :
+        "Go inside":
+            jump inside
+        "Stay in the cold":
+            jump outside
+        
+label outside:
+    scene skitrip
+    show b2
+    b "This is so fun"
+    b "Maybe we should stay here for a couple of years?"
+    b "Okay, we're pushing act III to 2028.."
+    return
+    
+
+label inside:
+    scene hotel
+    show k2 
+    k "I haven't gotten to chill like this in a while"
+    
+    scene hotel
     show beymad
+    b "You guys I sorta just thought a bit about sth"
     b "I probably should hit the studio, haven't been there in like 2 years lol. The beyhive is buzzin tho."
     b "They be making crazy theories too, too bad they will never guess my plans."
 
@@ -89,7 +85,7 @@ label beyonce:
         "Destiny's Child is reuniting":
             jump reunion
 
-        "Jay-Z cheated and beyoncé is moving to Paris with her chidren (again)":
+        "Jay-Z cheated and beyoncé is moving to Paris with her children (again)":
             jump paris
 
 label album:
@@ -130,8 +126,30 @@ label Rihanna:
     scene hotel
     show call1
     b "Heyyy, Rihanna, how are you??"
-    return
 
-    
+    scene room
+    show r
+    r "Heyyy, I'm good, why are you ringing me?"
+
+    scene hotel
+    show call1
+    "RING THE ALARM"
+    b "Sooo, I was thinking, could we make an album together?"
+    b "I can fly over to the studio rn"
+
+    scene room
+    show r
+    r "I mean I'm definitely down, we can meet up at the studio, lmk when you're near there"
+
+        menu:
+        "Fly to the studio.":
+        jump studio
+
+label studio:
+    scene studio
+    show
+
+
+
 
     
