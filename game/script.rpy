@@ -31,6 +31,13 @@ image sb = Transform("images/Spongebob1.jpg", xysize=(1920, 1080))
 image ri = Transform("images/riri.png", xysize=(600, 700))
 image blue = Transform("images/blueback.jpg", xysize=(1920, 1080))
 image visuals = Transform("images/visuals.jpg", xysize=(1920, 1080))
+image shocked = Transform("images/shocked.png", xysize=(700, 900))
+image sb2 = Transform("images/sb2.jpg", xysize=(1920, 1080))
+image lockin = Transform("images/lockin.jpg", xysize=(1920, 1080))
+image record = Transform("images/record.jpg", xysize=(1920, 1080))
+image upload = Transform("images/upload.jpg", xysize=(1920, 1080))
+image sb3 = Transform("images/sb3.jpg", xysize=(1920, 1080))
+image iphone = Transform("images/iphone2.png", xysize=(1920, 1080))
 
 label start:
 
@@ -91,11 +98,14 @@ label inside:
         "Beyoncé is releasing act III":
             jump actIII
 
-        "Destiny's Child is reuniting":
+        "Destiny's Child is reuniting for an album":
             jump reunion
 
         "Jay-Z cheated and beyoncé is moving to Paris with her children (again)":
             jump paris
+
+        "Beyoncé randomly gets really inspired by the cold":
+            jump inspiration
 
 label album:
     scene hotel
@@ -122,7 +132,8 @@ label paris:
 
 label doing:
     b "They will never guess this. Okay they actually might."
-    b "I'm making a co-album with Rihanna."
+    b "I really wanna make a co-album with someone, that sounds like fun"
+    b "Perhaps a co-album with Rihanna?"
     
     menu:
         "Call Rihanna":
@@ -130,6 +141,7 @@ label doing:
 
         "Quit cause you don't want an album with Rihanna":
             return
+
 
 label Rihanna:
     scene hotel
@@ -291,17 +303,163 @@ label never:
     return
       
 
+label inspiration:
+    scene hotel
+    show shocked
 
+    b "I have an idea..."
+    b "I got really inspired by the cold rn"
+    b "I gotta go write this song"
 
+    scene hotel
+    show k2
 
+    k "Go write that song girll"
 
+    scene hotel
+    show m2
 
+    m "Green means gooo!!!"
 
+    scene hotel
+    show b1
 
+    b "Okay, see y'all in a couple hours"
 
+    scene sb2
 
+    "..."
 
+    scene lockin
 
+    "..."
 
+    b "Okay I got something"
+    b "might release another single before act III.."
+
+    menu:
+        "Record the single":
+            jump record
 
     
+label record:
+    scene record
+    "Recording the song"
+
+    scene sb2
+
+    "..."
+
+    scene lockin
+    b "yayyyy, I finished it, should I release it or not"
+
+    menu:
+        "Release":
+            jump release
+
+        "Don't release":
+            jump unrelease
+
+
+label release:
+    scene upload
+    "..."
+
+    scene lockin
+    b "Okay it uploaded!!!"
+
+    scene hotel
+    show b2
+
+    b "guys, I uploaded my song"
+
+    scene hotel
+    show m2
+
+    m "you go gurl"
+
+    scene sb3
+
+    "..."
+
+    scene iphone
+
+    b "WOHOOOOO!!!"
+
+    k "Let's go celebrate"
+
+    menu:
+        "End":
+            jump end2
+
+label end2:
+    scene blue
+    
+    "Yayyyy! Beyonce released a new song :)"
+
+    menu: 
+        "End":
+            return
+
+        "BONUSSSSS":
+            jump bonus
+
+
+label unrelease:
+    scene hotel
+    show b1
+
+    b "Okay, i just finished my song, but I didn't release it"
+    b "We can just hang out and continue enjoying our trip"
+
+    scene hotel
+    show k2
+
+    k "that sounds good"
+
+    scene sb3
+
+    "..."
+
+    scene hotel
+    show shocked
+
+    b "Has anyone seen my laptop, I didn't put it in my safe.."
+
+    scene hotel
+    show m
+
+    m "Maybe it was stolen by someone and they released your songs..?"
+
+    scene hotel
+    show shocked
+
+    b "OH NO, NOT SOMEONE TRYING TO STEAL MY LAPTOP AGAIN.."
+
+    scene hotel
+    show k
+
+    "Beyyy, your laptop is here"
+    "Ain't nobody steal it"
+    "Be more careful tho"
+
+    menu:
+        "End":
+            jump end3
+
+label end3:
+    scene blue
+    
+    "Yayyy, Bey's laptop is okayyy"
+
+    menu:
+        "End":
+            return
+
+        "BONUSSSS":
+            jump bonus
+
+
+
+
+
