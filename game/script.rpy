@@ -88,7 +88,7 @@ label inside:
         "Beyoncé is releasing more merch":
             jump merch
 
-        "Beyoncé is releasing act III (you wish)":
+        "Beyoncé is releasing act III":
             jump actIII
 
         "Destiny's Child is reuniting":
@@ -263,7 +263,8 @@ label yes2:
 
 label bonus:
     scene hive
-    "When are we getting the visuals?"
+    show Chika
+    Chika "When are we getting the visuals?"
 
     menu:
         "You are the visuals":
@@ -277,20 +278,18 @@ label visuals:
 
     "CORRECT"
     b "You are the visuals baby"
-
+            
     return
-
-
+        
+        
+            
 label never:
 
     "INCORRECT"
-    "We are the visuals"
+    b "You are the visuals baby"
 
     return
-
-
-
-
+      
 
 
 
