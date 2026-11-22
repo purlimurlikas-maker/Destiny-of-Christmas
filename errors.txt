@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 50: expected menuitem
+    jump beyonce
+    ^
+
+Ren'Py Version: Ren'Py 8.6.1.26111705
+Sat Nov 21 16:58:37 2026

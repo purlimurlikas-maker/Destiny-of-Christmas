@@ -1,31 +1,30 @@
-2026-11-21 20:37:38 UTC
+2026-11-22 01:16:45 UTC
 macOS-27.2.1-arm64-arm-64bit
 Ren'Py 8.6.1.26111705
 
-Early init took 29 ms
-Loading error handling took 20 ms
-Loading script took 63 ms
-Loading save slot metadata took 12 ms
+Early init took 34 ms
+Loading error handling took 17 ms
+Loading script took 51 ms
+Loading save slot metadata took 15 ms
 Loading persistent took 0 ms
 Running init code took 21 ms
 Loading analysis data took 2 ms
 Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 1 ms
-Backing up script files to '/Users/parleluhaaar/Library/RenPy/backups/Destiny-of-Christmas':
-Dump and make backups took 23 ms
+Reloading save slot metadata took 4 ms
+Dump and make backups took 22 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
 Initial gc took 16 ms
 Creating interface object took 0 ms
 Init translation took 0 ms
 Cleaning stores took 0 ms
-Load screen analysis took 0 ms
-Analyze screens took 4 ms
-Save screen analysis took 6 ms
+Load screen analysis took 5 ms
+Analyze screens took 0 ms
+Save screen analysis took 0 ms
 Save pyanalysis took 0 ms
-Save bytecode took 15 ms
+Save bytecode took 0 ms
 Running _start took 0 ms
-Interface start took 1157 ms
+Interface start took 1583 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -44,6 +43,6 @@ Emitting shaders as GLSL 330.
 Screen sizes: virtual=(1920, 1080) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Cleaning stores took 0 ms
-Load screen analysis took 8 ms
+Load screen analysis took 9 ms
 Analyze screens took 0 ms
 Running _start took 1 ms
