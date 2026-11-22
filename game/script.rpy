@@ -2,7 +2,7 @@
 define m = Character("Michelle")
 define k = Character("Kelly")
 define j = Character("JAY-Z")
-define bl = Character("Blue Ivy")
+define blue = Character("Blue Ivy")
 define dc = Character("Destiny's Child")
 define Chika = Character("Deluluhive person 1")
 define Pearl = Character("Deluluhive person 2")
@@ -25,6 +25,10 @@ image call1 = Transform("images/call1.png", xysize=(600, 700))
 image call2 = Transform("images/call2.png", xysize=(600, 700))
 image room = Transform("images/room.jpg", xysize=(1920, 1080))
 image studio = Transform("images/studio.jpg", xysize=(1920, 1080))
+image computer = Transform("images/beyandhercomputer.png", xysize=(700, 700))
+image r = Transform("images/rihanna.png", xysize=(700, 700))
+image sb = Transform("images/Spongebob1.jpg", xysize=(1920, 1080))
+image ri = Transform("images/riri.png", xysize=(600, 700))
 
 label start:
 
@@ -141,13 +145,83 @@ label Rihanna:
     show r
     r "I mean I'm definitely down, we can meet up at the studio, lmk when you're near there"
 
-        menu:
+    menu:
         "Fly to the studio.":
-        jump studio
+            jump studio
 
 label studio:
+    
     scene studio
-    show
+    show computer
+    b " I cooked up some lyrics here and I have an idea for the beat too"
+
+    scene studio
+    show r
+    r "Let me see"
+    "a couple minutes later"
+    r "Bey, this is greattt, now we just need to make like 15 more songs so we'd have variety to choose from."
+
+    scene sb
+    "..."
+
+    scene studio
+    show ri
+
+    r "Okay, seems like we're done with recording these songs, these are fire."
+
+    scene studio
+    show b2 
+
+    b "Yessss, what should we name these?"
+
+    scene studio
+    show riri
+    
+    ri "uhh let me see"
+    ri "the first one could be FREEZE TIME"
+    ri "the second could be BREATHE AGAIN and so on"
+
+    scene studio
+    show b2
+
+    b "Yeah, we'll figure sth out"
+    b "What about the album? It's kinda RnB, Pop and yeah a combination of everything."
+
+    menu:
+        "A FEELING":
+            jump name
+
+        "EVERYTHING":
+            jump name
+
+        "FROZEN IN TIME":
+            jump name
+
+        "STILL GOT LOVE":
+            jump name
+
+        "PERMANENT":
+            jump name
+
+
+label name:
+    scene studio
+    show ri
+
+    r "Yesss, girl this is gooood, we still have music videos to film, but when should we announce it? Or are we gonna release it without any notice, like you did with Self-Titled?"
+
+    scene studio
+    show b2
+
+    b "hold on, let me check what my manager recommends"
+
+
+
+
+
+
+
+
 
 
 

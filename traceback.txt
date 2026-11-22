@@ -1,23 +1,23 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 81, in script
-    jump inside
-renpy.script.LabelNotFound: could not find label 'inside'.
+  File "game/script.rpy", line 179, in script
+    jump option1
+renpy.script.LabelNotFound: could not find label 'option1'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 81, in script
-    jump inside
+  File "game/script.rpy", line 179, in script
+    jump option1
   File "renpy/ast.py", line 1998, in execute
     rv = renpy.game.script.lookup(target)
          ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
   File "renpy/script.py", line 1167, in lookup
     raise LabelNotFound(original)
-renpy.script.LabelNotFound: could not find label 'inside'.
+renpy.script.LabelNotFound: could not find label 'option1'.
 
 macOS-27.2.1-arm64-arm-64bit arm64
 Ren'Py 8.6.1.26111705
 Destiny of Christmas 1.0
-Sat Nov 21 22:37:04 2026
+Sun Nov 22 01:45:30 2026
